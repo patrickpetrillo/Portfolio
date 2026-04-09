@@ -1292,7 +1292,7 @@ p{
 ===================== */
 @media (max-width: 900px){
   .gallery-full{
-    height: 58vh;
+    height: 45vh;
     min-height: 460px;
   }
 
@@ -1317,7 +1317,7 @@ p{
 
 @media (max-width: 600px){
   .gallery-full{
-    height: 25vh;
+    height: 5vh;
     min-height: 420px;
   }
 }
