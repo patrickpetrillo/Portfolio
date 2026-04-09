@@ -712,11 +712,11 @@ p{
   }
 
   .hero2__visual{
-    min-height: 420px;
+    min-height: 200px;
   }
 
   .hero2__content{
-    width: 50%;
+    width: 100%;
   }
 
   .hero2__back{
