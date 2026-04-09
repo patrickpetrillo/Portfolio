@@ -589,6 +589,52 @@ p{
   }
 }
 
+/* Mobile */
+@media (max-width: 600px){
+  .contact-bar{
+    padding: 46px 0;
+  }
+
+  .contact-bar__inner{
+    padding: 0 18px;
+    gap: 22px;
+  }
+
+  .contact-bar__left{
+    gap: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-bar__name{
+    font-size: 18px;
+    letter-spacing: 1.4px;
+  }
+
+  .contact-bar__link{
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  .contact-bar__right{
+    gap: 16px;
+  }
+
+  .contact-bar__social{
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -819,7 +865,7 @@ p{
 ===================== */
 @media (max-width: 600px){
   .text-module{
-    padding: 90px 0;
+    padding: 120px 120px;
   }
 
   .text-module__title{
@@ -1317,7 +1363,7 @@ p{
 
 @media (max-width: 600px){
   .gallery-full{
-    height: 5vh;
+    height: 50vh;
     min-height: 420px;
   }
 }
@@ -1495,7 +1541,7 @@ p{
 
 @media (max-width: 600px) {
   .programs-module {
-    padding: 50px 24px;
+    padding: 50px 50px;
   }
 
   .programs-module__grid {
