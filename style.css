@@ -716,7 +716,7 @@ p{
   }
 
   .hero2__content{
-    width: 100%;
+    width: 50%;
   }
 
   .hero2__back{
@@ -731,11 +731,11 @@ p{
   }
 
   .hero2__title{
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .hero2__subtitle{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
