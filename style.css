@@ -567,18 +567,24 @@ p{
 
 
 
+
+
 /* =====================
    MODULO HERO 2 
 ===================== */
 .hero2{
   position: relative;
   background: #000;
+
+  /* Variabili spacing globali */
+  --hero-side-space: 80px;
+  --hero-top-space: 40px;
 }
 
 /* Parte visuale */
 .hero2__visual{
   position: relative;
-  height: 64vh;
+  height: 64svh;
   min-height: 520px;
   max-height: 720px;
   overflow: hidden;
@@ -593,7 +599,7 @@ p{
   object-fit: cover;
 }
 
-/* Overlay scuro a sinistra */
+/* Overlay scuro */
 .hero2__overlay{
   position: absolute;
   inset: 0;
@@ -607,25 +613,27 @@ p{
   );
 }
 
-/* Container */
+/* Container interno */
 .hero2__inner{
   position: relative;
   z-index: 2;
   height: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 var(--hero-side-space);
 
   display: flex;
   align-items: center;
 }
 
-/* Menu back */
+/* =====================
+   FRECCIA BACK
+===================== */
 .hero-menu{
   position: absolute;
-  top: 40px;
-  left: 40px;
-  z-index: 5;
+  top: calc(env(safe-area-inset-top, 0px) + var(--hero-top-space));
+  left: var(--hero-side-space);
+  z-index: 10;
 }
 
 .hero-menu__back{
@@ -643,7 +651,9 @@ p{
   display: block;
 }
 
-/* Testo */
+/* =====================
+   TESTI
+===================== */
 .hero2__content{
   width: min(520px, 70%);
   color: #fff;
@@ -671,16 +681,18 @@ p{
 }
 
 /* =====================
-   RESPONSIVE
+   TABLET
 ===================== */
 @media (max-width: 900px){
-  .hero2__visual{
-    height: 58vh;
-    min-height: 460px;
+
+  .hero2{
+    --hero-side-space: 24px;
+    --hero-top-space: 24px;
   }
 
-  .hero2__inner{
-    padding: 0 24px;
+  .hero2__visual{
+    height: 58svh;
+    min-height: 460px;
   }
 
   .hero2__content{
@@ -691,13 +703,18 @@ p{
     font-size: 38px;
   }
 
-  .hero-menu{
-    top: 28px;
-    left: 24px;
-  }
 }
 
+/* =====================
+   MOBILE
+===================== */
 @media (max-width: 600px){
+
+  .hero2{
+    --hero-side-space: 18px;
+    --hero-top-space: 18px;
+  }
+
   .hero2__visual{
     min-height: 420px;
   }
@@ -710,9 +727,8 @@ p{
     font-size: 32px;
   }
 
-  .hero-menu{
-    top: 22px;
-    left: 18px;
+  .hero2__subtitle{
+    font-size: 16px;
   }
 
   .hero-menu__back{
@@ -724,7 +740,12 @@ p{
     width: 22px;
     height: 22px;
   }
+
 }
+
+
+
+
 
 
 
