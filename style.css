@@ -578,7 +578,7 @@ p{
 /* Parte visuale */
 .hero2__visual{
   position: relative;
-  height: 64vh;          /* proporzione BMW-like */
+  height: 64vh;
   min-height: 520px;
   max-height: 720px;
   overflow: hidden;
@@ -618,6 +618,29 @@ p{
 
   display: flex;
   align-items: center;
+}
+
+/* Menu back */
+.hero-menu{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 5;
+}
+
+.hero-menu__back{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  text-decoration: none;
+}
+
+.hero-menu__icon{
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 /* Testo */
@@ -667,6 +690,11 @@ p{
   .hero2__title{
     font-size: 38px;
   }
+
+  .hero-menu{
+    top: 28px;
+    left: 24px;
+  }
 }
 
 @media (max-width: 600px){
@@ -681,9 +709,22 @@ p{
   .hero2__title{
     font-size: 32px;
   }
+
+  .hero-menu{
+    top: 22px;
+    left: 18px;
+  }
+
+  .hero-menu__back{
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-menu__icon{
+    width: 22px;
+    height: 22px;
+  }
 }
-
-
 
 
 
