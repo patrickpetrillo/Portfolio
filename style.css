@@ -577,12 +577,8 @@ p{
   background: #000;
 
   --hero-side-space: 80px;
-  --hero-top-space: 72px;
-  --hero-back-size: 44px;
-  --hero-back-icon-size: 28px;
 }
 
-/* Parte visuale */
 .hero2__visual{
   position: relative;
   height: 64svh;
@@ -591,7 +587,6 @@ p{
   overflow: hidden;
 }
 
-/* Media */
 .hero2__media{
   position: absolute;
   inset: 0;
@@ -600,7 +595,6 @@ p{
   object-fit: cover;
 }
 
-/* Overlay scuro */
 .hero2__overlay{
   position: absolute;
   inset: 0;
@@ -614,7 +608,6 @@ p{
   );
 }
 
-/* Container */
 .hero2__inner{
   position: relative;
   z-index: 2;
@@ -627,36 +620,33 @@ p{
   align-items: center;
 }
 
-/* BACK BUTTON */
-.hero2__back{
-  position: absolute;
-  top: calc(env(safe-area-inset-top, 0px) + var(--hero-top-space));
-  left: var(--hero-side-space);
-  z-index: 3;
+.hero2__content{
+  width: min(520px, 70%);
+  color: #fff;
 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero2__back{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--hero-back-size);
-  height: var(--hero-back-size);
-
+  width: 42px;
+  height: 42px;
+  margin: 0 0 42px;
   color: #fff;
   text-decoration: none;
   background: transparent;
   border: 0;
+  padding: 0;
 }
 
 .hero2__back-icon{
-  width: var(--hero-back-icon-size);
-  height: var(--hero-back-icon-size);
+  width: 28px;
+  height: 28px;
   display: block;
-  flex: 0 0 auto;
-}
-
-/* Testo */
-.hero2__content{
-  width: min(520px, 70%);
-  color: #fff;
 }
 
 .hero2__title{
@@ -669,7 +659,7 @@ p{
 .hero2__subtitle{
   font-size: 18px;
   letter-spacing: 1px;
-  margin: 0 0 18px;
+  margin: 0;
   opacity: .95;
 }
 
@@ -686,9 +676,6 @@ p{
 @media (max-width: 900px){
   .hero2{
     --hero-side-space: 24px;
-    --hero-top-space: 36px;
-    --hero-back-size: 40px;
-    --hero-back-icon-size: 24px;
   }
 
   .hero2__visual{
@@ -698,6 +685,17 @@ p{
 
   .hero2__content{
     width: 78%;
+  }
+
+  .hero2__back{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 34px;
+  }
+
+  .hero2__back-icon{
+    width: 24px;
+    height: 24px;
   }
 
   .hero2__title{
@@ -711,9 +709,6 @@ p{
 @media (max-width: 600px){
   .hero2{
     --hero-side-space: 18px;
-    --hero-top-space: 26px;
-    --hero-back-size: 38px;
-    --hero-back-icon-size: 22px;
   }
 
   .hero2__visual{
@@ -722,6 +717,17 @@ p{
 
   .hero2__content{
     width: 100%;
+  }
+
+  .hero2__back{
+    width: 38px;
+    height: 38px;
+    margin-bottom: 28px;
+  }
+
+  .hero2__back-icon{
+    width: 22px;
+    height: 22px;
   }
 
   .hero2__title{
