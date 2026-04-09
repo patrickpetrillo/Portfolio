@@ -223,10 +223,6 @@ p {
   }
 }
 
-
-
-
-
 /* =====================
    MODULO MARQUEE TEXT
 ===================== */
@@ -284,10 +280,6 @@ p {
     animation-duration: 18s;
   }
 }
-
-
-
-
 
 /* =====================
    MODULO PORTFOLIO
@@ -450,10 +442,6 @@ p {
   }
 }
 
-
-
-
-
 /* =====================
    MODULO CONTATTI & SOCIAL
 ===================== */
@@ -501,6 +489,7 @@ p {
   position: absolute;
   left: 0;
   right: 0;
+  bottom: 0;
   height: 1px;
   background: rgba(255, 255, 255, 0.75);
   transform: scaleX(0.6);
@@ -578,6 +567,7 @@ p {
 
   .contact-bar__link {
     font-size: 14px;
+    padding-bottom: 4px;
   }
 
   .contact-bar__right {
