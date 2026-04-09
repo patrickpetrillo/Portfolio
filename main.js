@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   initGallerySliders();
   initVideoFullscreen();
@@ -10,19 +9,29 @@ document.addEventListener("DOMContentLoaded", () => {
 function openVideoFullscreen(video) {
   if (!video) return;
 
-  // fullscreen cross-browser
+  // prova a far partire il video
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {});
+  }
+
+  // iPhone / iOS Safari
+  if (typeof video.webkitEnterFullscreen === "function") {
+    try {
+      video.webkitEnterFullscreen();
+      return;
+    } catch (error) {
+      // continua con gli altri metodi
+    }
+  }
+
+  // Standard fullscreen
   if (video.requestFullscreen) {
-    video.requestFullscreen();
+    video.requestFullscreen().catch?.(() => {});
   } else if (video.webkitRequestFullscreen) {
     video.webkitRequestFullscreen();
   } else if (video.msRequestFullscreen) {
     video.msRequestFullscreen();
-  }
-
-  // play sicuro
-  const playPromise = video.play();
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {});
   }
 }
 
@@ -63,7 +72,22 @@ function initGallerySliders() {
       update();
     }
 
-    // BOTTONI
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoplay() {
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+      }
+    }
+
+    function resetAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
     prev.addEventListener("click", () => {
       prevSlide();
       resetAutoplay();
@@ -74,21 +98,6 @@ function initGallerySliders() {
       resetAutoplay();
     });
 
-    // AUTOPLAY
-    function startAutoplay() {
-      autoplayInterval = setInterval(nextSlide, 5000); // 5 sec
-    }
-
-    function stopAutoplay() {
-      clearInterval(autoplayInterval);
-    }
-
-    function resetAutoplay() {
-      stopAutoplay();
-      startAutoplay();
-    }
-
-    // PAUSA SU HOVER (UX migliore)
     gallery.addEventListener("mouseenter", stopAutoplay);
     gallery.addEventListener("mouseleave", startAutoplay);
 
@@ -101,16 +110,17 @@ function initGallerySliders() {
    VIDEO — FULLSCREEN UNIFICATO
 ===================== */
 function initVideoFullscreen() {
-
   // 1. VIDEO 16:9
   const frames = document.querySelectorAll(".video-16x9__frame");
 
   frames.forEach((frame) => {
     const video = frame.querySelector(".video-16x9__media");
     const btn = frame.querySelector(".video-16x9__fullscreen");
+
     if (!video || !btn) return;
 
     btn.addEventListener("click", (e) => {
+      e.preventDefault();
       e.stopPropagation();
       openVideoFullscreen(video);
     });
@@ -124,10 +134,11 @@ function initVideoFullscreen() {
 
     buttons.forEach((button) => {
       button.addEventListener("click", (e) => {
+        e.preventDefault();
         e.stopPropagation();
 
         const item = button.closest(".video-grid-reel__item");
-        const video = item?.querySelector(".video-grid-reel__media");
+        const video = item ? item.querySelector(".video-grid-reel__media") : null;
 
         openVideoFullscreen(video);
       });
@@ -144,6 +155,7 @@ function initVideoFullscreen() {
     if (!button || !video) return;
 
     button.addEventListener("click", (e) => {
+      e.preventDefault();
       e.stopPropagation();
       openVideoFullscreen(video);
     });
