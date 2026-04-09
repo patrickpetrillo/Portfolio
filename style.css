@@ -276,6 +276,33 @@ p{
   animation-duration: 28s;
 }
 
+/* =====================
+   MOBILE MARQUEE
+===================== */
+@media (max-width: 600px){
+
+  .marquee{
+    height: 120px;
+  }
+
+  .marquee-text{
+    font-size: 62px;
+    padding-right: 40px;
+    letter-spacing: 1px;
+  }
+
+  .marquee-track{
+    animation-duration: 18s;
+  }
+
+}
+
+
+
+
+
+
+
 
 
 
