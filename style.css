@@ -706,7 +706,7 @@ p{
 /* =====================
    MOBILE
 ===================== */
-@media (max-width: 300px){
+@media (max-width: 600px){
   .hero2{
     --hero-side-space: 50px;
   }
