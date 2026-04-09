@@ -570,15 +570,14 @@ p{
 
 
 /* =====================
-   MODULO HERO 2 
+   MODULO HERO 2
 ===================== */
 .hero2{
   position: relative;
   background: #000;
 
-  /* Variabili spacing globali */
   --hero-side-space: 80px;
-  --hero-top-space: 40px;
+  --hero-top-space: 72px;
 }
 
 /* Parte visuale */
@@ -613,7 +612,7 @@ p{
   );
 }
 
-/* Container interno */
+/* Container */
 .hero2__inner{
   position: relative;
   z-index: 2;
@@ -626,14 +625,12 @@ p{
   align-items: center;
 }
 
-/* =====================
-   FRECCIA BACK
-===================== */
+/* Freccia */
 .hero-menu{
   position: absolute;
   top: calc(env(safe-area-inset-top, 0px) + var(--hero-top-space));
   left: var(--hero-side-space);
-  z-index: 10;
+  z-index: 5;
 }
 
 .hero-menu__back{
@@ -646,14 +643,12 @@ p{
 }
 
 .hero-menu__icon{
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   display: block;
 }
 
-/* =====================
-   TESTI
-===================== */
+/* Testo */
 .hero2__content{
   width: min(520px, 70%);
   color: #fff;
@@ -684,10 +679,9 @@ p{
    TABLET
 ===================== */
 @media (max-width: 900px){
-
   .hero2{
     --hero-side-space: 24px;
-    --hero-top-space: 24px;
+    --hero-top-space: 36px;
   }
 
   .hero2__visual{
@@ -702,17 +696,15 @@ p{
   .hero2__title{
     font-size: 38px;
   }
-
 }
 
 /* =====================
    MOBILE
 ===================== */
 @media (max-width: 600px){
-
   .hero2{
     --hero-side-space: 18px;
-    --hero-top-space: 18px;
+    --hero-top-space: 26px;
   }
 
   .hero2__visual{
@@ -737,10 +729,9 @@ p{
   }
 
   .hero-menu__icon{
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
   }
-
 }
 
 
