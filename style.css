@@ -708,7 +708,7 @@ p{
 ===================== */
 @media (max-width: 600px){
   .hero2{
-    --hero-side-space: 18px;
+    --hero-side-space: 50px;
   }
 
   .hero2__visual{
