@@ -630,7 +630,7 @@ p{
   position: absolute;
   top: calc(env(safe-area-inset-top, 0px) + var(--hero-top-space));
   left: var(--hero-side-space);
-  z-index: 5;
+  z-index: 2;
 }
 
 .hero-menu__back{
