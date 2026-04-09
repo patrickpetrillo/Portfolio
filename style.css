@@ -706,17 +706,17 @@ p{
 /* =====================
    MOBILE
 ===================== */
-@media (max-width: 600px){
+@media (max-width: 300px){
   .hero2{
     --hero-side-space: 50px;
   }
 
   .hero2__visual{
-    min-height: 100px;
+    min-height: 420px;
   }
 
   .hero2__content{
-    width: 50%;
+    width: 100%;
   }
 
   .hero2__back{
