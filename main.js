@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initGallerySliders();
   initVideoFullscreen();
+  initFloatingHome();
 });
 
 /* =====================
@@ -9,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function openVideoFullscreen(video) {
   if (!video) return;
 
-  // prova a far partire il video
   const playPromise = video.play();
   if (playPromise !== undefined) {
     playPromise.catch(() => {});
@@ -33,6 +33,23 @@ function openVideoFullscreen(video) {
   } else if (video.msRequestFullscreen) {
     video.msRequestFullscreen();
   }
+}
+
+function bindFullscreenButtons(containerSelector, buttonSelector, videoSelector) {
+  const containers = document.querySelectorAll(containerSelector);
+
+  containers.forEach((container) => {
+    const button = container.querySelector(buttonSelector);
+    const video = container.querySelector(videoSelector);
+
+    if (!button || !video) return;
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      openVideoFullscreen(video);
+    });
+  });
 }
 
 /* =====================
@@ -111,80 +128,58 @@ function initGallerySliders() {
 ===================== */
 function initVideoFullscreen() {
   // 1. VIDEO 16:9
-  const frames = document.querySelectorAll(".video-16x9__frame");
-
-  frames.forEach((frame) => {
-    const video = frame.querySelector(".video-16x9__media");
-    const btn = frame.querySelector(".video-16x9__fullscreen");
-
-    if (!video || !btn) return;
-
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      openVideoFullscreen(video);
-    });
-  });
+  bindFullscreenButtons(
+    ".video-16x9__frame",
+    ".video-16x9__fullscreen",
+    ".video-16x9__media"
+  );
 
   // 2. VIDEO GRID REEL
-  const reels = document.querySelectorAll(".video-grid-reel");
+  const reelButtons = document.querySelectorAll(".video-grid-reel__fullscreen");
 
-  reels.forEach((module) => {
-    const buttons = module.querySelectorAll(".video-grid-reel__fullscreen");
+  reelButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      const item = button.closest(".video-grid-reel__item");
+      const video = item?.querySelector(".video-grid-reel__media");
 
-        const item = button.closest(".video-grid-reel__item");
-        const video = item ? item.querySelector(".video-grid-reel__media") : null;
-
-        openVideoFullscreen(video);
-      });
+      openVideoFullscreen(video);
     });
   });
 
   // 3. VIDEO + TESTO
-  const textModules = document.querySelectorAll(".video-text-module__media");
+  bindFullscreenButtons(
+    ".video-text-module__media",
+    ".video-text-module__fullscreen",
+    ".video-text-module__video"
+  );
 
-  textModules.forEach((module) => {
-    const button = module.querySelector(".video-text-module__fullscreen");
-    const video = module.querySelector(".video-text-module__video");
-
-    if (!button || !video) return;
-
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      openVideoFullscreen(video);
-    });
-  });
+  // 4. IMAGE-TEXT MODULE con video
+  bindFullscreenButtons(
+    ".image-text-module__media",
+    ".image-text-module__fullscreen",
+    ".image-text-module__video"
+  );
 }
 
-
-
-
-// =====================
-// FLOATING HOME BUTTON
-// compare solo quando inizi a scrollare
-// =====================
-document.addEventListener("DOMContentLoaded", () => {
+/* =====================
+   FLOATING HOME BUTTON
+   compare solo quando inizi a scrollare
+===================== */
+function initFloatingHome() {
   const floatingHome = document.querySelector(".floating-home");
-
   if (!floatingHome) return;
 
-  const toggleFloatingHome = () => {
+  function toggleFloatingHome() {
     if (window.scrollY > 80) {
       floatingHome.classList.add("floating-home--visible");
     } else {
       floatingHome.classList.remove("floating-home--visible");
     }
-  };
+  }
 
-  // controllo iniziale
   toggleFloatingHome();
-
-  // controllo durante lo scroll
   window.addEventListener("scroll", toggleFloatingHome, { passive: true });
-});
+}
