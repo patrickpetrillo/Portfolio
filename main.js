@@ -10,16 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function openVideoFullscreen(video) {
   if (!video) return;
 
-  const wrapper = video.closest(
-    ".image-text-module__media, .video-text-module__media, .video-16x9__frame, .video-grid-reel__item"
-  );
-
   const playPromise = video.play();
   if (playPromise !== undefined) {
     playPromise.catch(() => {});
   }
 
-  // iPhone / iOS Safari
   if (typeof video.webkitEnterFullscreen === "function") {
     try {
       video.webkitEnterFullscreen();
@@ -27,15 +22,12 @@ function openVideoFullscreen(video) {
     } catch (error) {}
   }
 
-  // Fullscreen del contenitore, non del video
-  if (wrapper && wrapper.requestFullscreen) {
-    wrapper.requestFullscreen().catch?.(() => {});
-  } else if (wrapper && wrapper.webkitRequestFullscreen) {
-    wrapper.webkitRequestFullscreen();
-  } else if (wrapper && wrapper.msRequestFullscreen) {
-    wrapper.msRequestFullscreen();
-  } else if (video.requestFullscreen) {
+  if (video.requestFullscreen) {
     video.requestFullscreen().catch?.(() => {});
+  } else if (video.webkitRequestFullscreen) {
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) {
+    video.msRequestFullscreen();
   }
 }
 
