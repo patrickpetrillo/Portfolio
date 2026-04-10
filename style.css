@@ -504,61 +504,8 @@ p {
   }
 }
 
-/* =====================
-   HERO MENU — BACK ARROW
-===================== */
-.hero-menu {
-  position: absolute;
-  top: 150px;
-  left: 133px;
-  z-index: 5;
-}
 
-.hero-menu__back {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  opacity: 0.82;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
 
-.hero-menu__back:hover {
-  opacity: 1;
-  transform: translateX(-4px);
-}
-
-.hero-menu__back:focus,
-.hero-menu__back:focus-visible {
-  outline: none;
-}
-
-.hero-menu__back::before,
-.hero-menu__back::after {
-  content: none !important;
-  display: none !important;
-}
-
-.hero-menu__icon {
-  width: 34px;
-  height: 34px;
-  display: block;
-  pointer-events: none;
-}
-
-@media (max-width: 900px) {
-  .hero-menu {
-    top: 24px;
-    left: 24px;
-  }
-
-  .hero-menu__icon {
-    width: 24px;
-    height: 24px;
-  }
-}
 
 /* =====================
    VIDEO GRID REEL
@@ -779,6 +726,12 @@ p {
     min-height: 420px;
   }
 }
+
+
+
+
+
+
 
 /* =====================
    MODULO VIDEO
