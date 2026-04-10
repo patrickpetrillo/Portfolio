@@ -733,6 +733,7 @@ p {
 
 
 
+
 /* =====================
    MODULO VIDEO
 ===================== */
@@ -751,6 +752,25 @@ p {
   transform: scale(1);
   z-index: 0;
 }
+
+
+/* =====================
+   MOBILE FIX
+===================== */
+@media (max-width: 600px) {
+
+  .video-module {
+    height: 65vh;
+  }
+
+  .video-module__media {
+    object-fit: contain;
+    background: #000;
+  }
+
+}
+
+
 
 
 
