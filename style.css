@@ -765,7 +765,7 @@ p {
 
   .video-module__media {
     object-fit: cover;
-    transform: scale(1.05);
+    transform: scale(1.0);
     object-position: center center;
   }
 
