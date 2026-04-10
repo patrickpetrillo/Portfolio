@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initFloatingHome();
 });
 
-
 /* =====================
    HELPERS
 ===================== */
@@ -16,24 +15,29 @@ function openVideoFullscreen(video) {
     playPromise.catch(() => {});
   }
 
+  // iPhone / iOS Safari
   if (typeof video.webkitEnterFullscreen === "function") {
     try {
       video.webkitEnterFullscreen();
       return;
-    } catch (error) {}
+    } catch (error) {
+      // continua con gli altri metodi
+    }
   }
 
-  if (video.requestFullscreen) {
-    video.requestFullscreen().catch?.(() => {});
-  } else if (video.webkitRequestFullscreen) {
+  // Fullscreen del video stesso
+  if (typeof video.requestFullscreen === "function") {
+    video.requestFullscreen().catch(() => {});
+  } else if (typeof video.webkitRequestFullscreen === "function") {
     video.webkitRequestFullscreen();
-  } else if (video.msRequestFullscreen) {
+  } else if (typeof video.msRequestFullscreen === "function") {
     video.msRequestFullscreen();
   }
 }
 
 function bindFullscreenButtons(containerSelector, buttonSelector, videoSelector) {
   const containers = document.querySelectorAll(containerSelector);
+  if (!containers.length) return;
 
   containers.forEach((container) => {
     const button = container.querySelector(buttonSelector);
@@ -50,7 +54,7 @@ function bindFullscreenButtons(containerSelector, buttonSelector, videoSelector)
 }
 
 /* =====================
-   GALLERY FULL
+   GALLERY FULL — SLIDER + AUTOPLAY
 ===================== */
 function initGallerySliders() {
   const galleries = document.querySelectorAll("[data-gallery]");
@@ -92,7 +96,10 @@ function initGallerySliders() {
     }
 
     function stopAutoplay() {
-      if (autoplayInterval) clearInterval(autoplayInterval);
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
+      }
     }
 
     function resetAutoplay() {
@@ -119,27 +126,31 @@ function initGallerySliders() {
 }
 
 /* =====================
-   VIDEO FULLSCREEN
+   VIDEO — FULLSCREEN UNIFICATO
 ===================== */
 function initVideoFullscreen() {
+  // 1. VIDEO 16:9
   bindFullscreenButtons(
     ".video-16x9__frame",
     ".video-16x9__fullscreen",
     ".video-16x9__media"
   );
 
+  // 2. VIDEO + TESTO
   bindFullscreenButtons(
     ".video-text-module__media",
     ".video-text-module__fullscreen",
     ".video-text-module__video"
   );
 
+  // 3. IMAGE + TESTO con video
   bindFullscreenButtons(
     ".image-text-module__media",
     ".image-text-module__fullscreen",
     ".image-text-module__video"
   );
 
+  // 4. VIDEO GRID REEL
   const reelButtons = document.querySelectorAll(".video-grid-reel__fullscreen");
 
   reelButtons.forEach((button) => {
@@ -148,7 +159,7 @@ function initVideoFullscreen() {
       e.stopPropagation();
 
       const item = button.closest(".video-grid-reel__item");
-      const video = item?.querySelector(".video-grid-reel__media");
+      const video = item ? item.querySelector(".video-grid-reel__media") : null;
 
       openVideoFullscreen(video);
     });
@@ -156,7 +167,7 @@ function initVideoFullscreen() {
 }
 
 /* =====================
-   FLOATING HOME
+   FLOATING HOME BUTTON
 ===================== */
 function initFloatingHome() {
   const floatingHome = document.querySelector(".floating-home");
@@ -171,8 +182,5 @@ function initFloatingHome() {
   }
 
   toggleFloatingHome();
-
-  window.addEventListener("scroll", toggleFloatingHome, {
-    passive: true
-  });
+  window.addEventListener("scroll", toggleFloatingHome, { passive: true });
 }
