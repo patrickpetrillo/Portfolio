@@ -15,17 +15,13 @@ function openVideoFullscreen(video) {
     playPromise.catch(() => {});
   }
 
-  // iPhone / iOS Safari
   if (typeof video.webkitEnterFullscreen === "function") {
     try {
       video.webkitEnterFullscreen();
       return;
-    } catch (error) {
-      // continua con gli altri metodi
-    }
+    } catch (error) {}
   }
 
-  // Standard fullscreen
   if (video.requestFullscreen) {
     video.requestFullscreen().catch?.(() => {});
   } else if (video.webkitRequestFullscreen) {
@@ -53,7 +49,7 @@ function bindFullscreenButtons(containerSelector, buttonSelector, videoSelector)
 }
 
 /* =====================
-   GALLERY FULL — SLIDER + AUTOPLAY
+   GALLERY FULL
 ===================== */
 function initGallerySliders() {
   const galleries = document.querySelectorAll("[data-gallery]");
@@ -95,9 +91,7 @@ function initGallerySliders() {
     }
 
     function stopAutoplay() {
-      if (autoplayInterval) {
-        clearInterval(autoplayInterval);
-      }
+      if (autoplayInterval) clearInterval(autoplayInterval);
     }
 
     function resetAutoplay() {
@@ -124,17 +118,27 @@ function initGallerySliders() {
 }
 
 /* =====================
-   VIDEO — FULLSCREEN UNIFICATO
+   VIDEO FULLSCREEN
 ===================== */
 function initVideoFullscreen() {
-  // 1. VIDEO 16:9
   bindFullscreenButtons(
     ".video-16x9__frame",
     ".video-16x9__fullscreen",
     ".video-16x9__media"
   );
 
-  // 2. VIDEO GRID REEL
+  bindFullscreenButtons(
+    ".video-text-module__media",
+    ".video-text-module__fullscreen",
+    ".video-text-module__video"
+  );
+
+  bindFullscreenButtons(
+    ".image-text-module__media",
+    ".image-text-module__fullscreen",
+    ".image-text-module__video"
+  );
+
   const reelButtons = document.querySelectorAll(".video-grid-reel__fullscreen");
 
   reelButtons.forEach((button) => {
@@ -148,25 +152,10 @@ function initVideoFullscreen() {
       openVideoFullscreen(video);
     });
   });
-
-  // 3. VIDEO + TESTO
-  bindFullscreenButtons(
-    ".video-text-module__media",
-    ".video-text-module__fullscreen",
-    ".video-text-module__video"
-  );
-
-  // 4. IMAGE-TEXT MODULE con video
-  bindFullscreenButtons(
-    ".image-text-module__media",
-    ".image-text-module__fullscreen",
-    ".image-text-module__video"
-  );
 }
 
 /* =====================
-   FLOATING HOME BUTTON
-   compare solo quando inizi a scrollare
+   FLOATING HOME
 ===================== */
 function initFloatingHome() {
   const floatingHome = document.querySelector(".floating-home");
@@ -181,5 +170,8 @@ function initFloatingHome() {
   }
 
   toggleFloatingHome();
-  window.addEventListener("scroll", toggleFloatingHome, { passive: true });
+
+  window.addEventListener("scroll", toggleFloatingHome, {
+    passive: true
+  });
 }
