@@ -1632,9 +1632,9 @@ p {
   margin: 0;
   padding: 0;
 
-  line-height: 1;
+  line-height: 0;
 
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1654,7 +1654,7 @@ p {
   }
 
   .floating-home__text{
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.07em;
   }
 
