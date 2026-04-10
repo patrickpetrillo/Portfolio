@@ -161,3 +161,27 @@ function initVideoFullscreen() {
     });
   });
 }
+
+
+
+
+/* =====================
+   FLOATING HOME BUTTON
+===================== */
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const floatingHome = document.querySelector(".floating-home");
+  if (!floatingHome) return;
+
+  const toggleFloatingHome = () => {
+    if (window.scrollY > 80) {
+      floatingHome.classList.add("floating-home--visible");
+    } else {
+      floatingHome.classList.remove("floating-home--visible");
+    }
+  };
+
+  toggleFloatingHome();
+  window.addEventListener("scroll", toggleFloatingHome, { passive: true });
+});
+</script>
