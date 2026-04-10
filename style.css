@@ -1559,6 +1559,16 @@ p {
   display: block;
 }
 
+/* FULLSCREEN FIX */
+.image-text-module__video:fullscreen,
+.image-text-module__video:-webkit-full-screen,
+.image-text-module__video:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: #000;
+}
+
 /* TEXT */
 .image-text-module__title {
   font-size: 32px;
