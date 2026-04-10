@@ -114,29 +114,32 @@
 
 
 
+
 <!-- =====================
      MODULO VIDEO + TESTO
 ====================== -->
 <section class="video-text-module" aria-label="Video e testo progetto">
 
   <div class="video-text-module__inner">
-    
 
     <!-- VIDEO (SINISTRA) -->
     <div class="video-text-module__media">
       <video
-       class="video-text-module__video"
-       autoplay
-       muted
-       loop
-       playsinline
-       >
-
+        class="video-text-module__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      >
         <source src="Scarpe DragonBall/Dragon Ball (AltaQualità).webm" type="video/webm">
+        <source src="Scarpe DragonBall/Dragon Ball (AltaQualità).mp4" type="video/mp4">
       </video>
 
       <!-- Pulsante fullscreen -->
-      <button class="video-text-module__fullscreen" type="button">⤢</button>
+      <button class="video-text-module__fullscreen" type="button" aria-label="Apri video a schermo intero">
+        ⤢
+      </button>
     </div>
 
     <!-- TESTO (DESTRA) -->
@@ -148,26 +151,24 @@
 
       <div class="video-text-module__body">
         <p>
-         The video and photography project was developed with a creative and immersive approach,
-         aimed at highlighting the craftsmanship and uniqueness of the hand-painted footwear.
-         The visual narrative alternates between moments of production and presentation scenes, building
-         a dynamic and engaging story.
+          The video and photography project was developed with a creative and immersive approach,
+          aimed at highlighting the craftsmanship and uniqueness of the hand-painted footwear.
+          The visual narrative alternates between moments of production and presentation scenes,
+          building a dynamic and engaging story.
         </p>
 
         <p>
-         The use of colored lighting and enveloping atmospheres helps create a contemporary and distinctive
-         aesthetic, enhancing the painted details and the vibrancy of the illustrations. 
-         Close-up shots and a focus on the artist’s gestures emphasize the artisanal care and the value 
-         of handmade work.
+          The use of colored lighting and enveloping atmospheres helps create a contemporary and
+          distinctive aesthetic, enhancing the painted details and the vibrancy of the illustrations.
+          Close-up shots and a focus on the artist’s gestures emphasize the artisanal care and the
+          value of handmade work.
         </p>
 
         <p>
-         Dynamic editing and visual compositions reinforce the expressive character of the product, 
-         transforming the shoe into a narrative element. The result is a visually impactful piece of content,
-         designed to communicate originality and identity across digital channels.
-         </p>
-
-
+          Dynamic editing and visual compositions reinforce the expressive character of the product,
+          transforming the shoe into a narrative element. The result is a visually impactful piece
+          of content, designed to communicate originality and identity across digital channels.
+        </p>
       </div>
 
     </div>
@@ -175,6 +176,9 @@
   </div>
 
 </section>
+
+
+
 
 
 
