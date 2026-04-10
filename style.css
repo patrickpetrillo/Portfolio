@@ -760,12 +760,13 @@ p {
 @media (max-width: 600px) {
 
   .video-module {
-    height: 70vh;
+    height: 72vh;
   }
 
   .video-module__media {
-    object-fit: contain;
-    background: #000;
+    object-fit: cover;
+    transform: scale(1.08);
+    object-position: center center;
   }
 
 }
