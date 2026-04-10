@@ -165,12 +165,13 @@ function initVideoFullscreen() {
 
 
 
-/* =====================
-   FLOATING HOME BUTTON
-===================== */
-<script>
+// =====================
+// FLOATING HOME BUTTON
+// compare solo quando inizi a scrollare
+// =====================
 document.addEventListener("DOMContentLoaded", () => {
   const floatingHome = document.querySelector(".floating-home");
+
   if (!floatingHome) return;
 
   const toggleFloatingHome = () => {
@@ -181,7 +182,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // controllo iniziale
   toggleFloatingHome();
+
+  // controllo durante lo scroll
   window.addEventListener("scroll", toggleFloatingHome, { passive: true });
 });
-</script>
