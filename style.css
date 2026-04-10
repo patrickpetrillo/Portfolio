@@ -1595,10 +1595,6 @@ p {
 
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 
   box-shadow:
     0 10px 30px rgba(0,0,0,0.22),
@@ -1615,6 +1611,8 @@ p {
     background 0.25s ease;
 }
 
+
+/* Stato visibile */
 .floating-home--visible{
   opacity: 1;
   visibility: visible;
@@ -1622,22 +1620,42 @@ p {
   transform: translateX(-50%) translateY(0) scale(1);
 }
 
+
+/* Hover */
 .floating-home:hover{
   background: rgba(25,25,25,0.94);
 }
 
+
+/* Testo / H1 */
 .floating-home__text{
+  margin: 0;
+  padding: 0;
+
   line-height: 1;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #fff;
 }
+
 
 /* Mobile */
 @media (max-width: 768px){
+
   .floating-home{
     top: 14px;
     min-width: 96px;
     height: 42px;
     padding: 0 18px;
+  }
+
+  .floating-home__text{
     font-size: 12px;
     letter-spacing: 0.07em;
   }
+
 }
