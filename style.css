@@ -18,12 +18,21 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Synonym_Medium";
+  src: url("Font/Synonym-Medium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* =====================
    TYPOGRAPHY SYSTEM
 ===================== */
 :root {
   --font-primary: "Synonym_Bold", sans-serif;
-  --font-secondary: "Synonym_Bold", sans-serif;
+  --font-secondary: "Synonym_Medium", sans-serif;
 
   --font-h1: var(--font-primary);
   --font-h2: var(--font-primary);
@@ -54,7 +63,7 @@ body {
 body {
   background: #000;
   color: #fff;
-  font-family: "Synonym_Bold", sans-serif;
+  font-family: "Synonym_Medium", sans-serif;
   font-weight: var(--weight-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -82,7 +91,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Synonym_Bold", sans-serif;
+  font-family: "Synonym_Medium", sans-serif;
   font-weight: var(--weight-h2);
   font-size: clamp(32px, 4vw, 48px);
   letter-spacing: 0.5px;
