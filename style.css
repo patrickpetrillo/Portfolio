@@ -11,8 +11,8 @@
    FONT
 ===================== */
 @font-face {
-  font-family: "Morthix";
-  src: url("Font/MORTHIX.otf") format("opentype");
+  font-family: "Satoshi_Bold";
+  src: url("Font/Satoshi-Bold.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "Arciform";
-  src: url("Font/Arciform.otf") format("opentype");
+  src: url("Font/Satoshi-Bold.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: "Mont Light";
-  src: url("Font/Mont-ExtraLightDEMO.otf") format("opentype");
+  src: url("Font/Satoshi-Bold.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@
    TYPOGRAPHY SYSTEM
 ===================== */
 :root {
-  --font-primary: "Morthix", sans-serif;
+  --font-primary: "MSatoshi_Bold", sans-serif;
   --font-secondary: "Arciform", sans-serif;
 
   --font-h1: var(--font-primary);
@@ -91,28 +91,28 @@ h6 {
 }
 
 h1 {
-  font-family: "Morthix", sans-serif;
+  font-family: "Satoshi_Bold", sans-serif;
   font-weight: var(--weight-h1);
   font-size: clamp(40px, 5vw, 64px);
   letter-spacing: 1px;
 }
 
 h2 {
-  font-family: "Morthix", sans-serif;
+  font-family: "Satoshi_Bold", sans-serif;
   font-weight: var(--weight-h2);
   font-size: clamp(32px, 4vw, 48px);
   letter-spacing: 0.5px;
 }
 
 h3 {
-  font-family: "Morthix", sans-serif;
+  font-family: "Satoshi_Bold", sans-serif;
   font-weight: var(--weight-h3);
   font-size: clamp(24px, 3vw, 32px);
   letter-spacing: 0.5px;
 }
 
 h4 {
-  font-family: "Mont Light", sans-serif;
+  font-family: "Satoshi_Bold", sans-serif;
   font-weight: var(--weight-h4);
   letter-spacing: 8px;
 }
