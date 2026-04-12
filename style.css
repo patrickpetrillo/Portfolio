@@ -26,6 +26,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Synonym_Light";
+  src: url("Font/Synonym-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* =====================
    TYPOGRAPHY SYSTEM
@@ -105,7 +112,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Synonym_Medium", sans-serif;
+  font-family: "Synonym_Light", sans-serif;
   font-weight: var(--weight-h4);
   letter-spacing: 8px;
 }
