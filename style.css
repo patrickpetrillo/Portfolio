@@ -26,7 +26,13 @@
   font-display: swap;
 }
 
-
+@font-face {
+  font-family: "Boska_Black";
+  src: url("Font/Boska-Black.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* =====================
    TYPOGRAPHY SYSTEM
@@ -85,7 +91,7 @@ h6 {
 }
 
 h1 {
-  font-family: "Satoshi_Bold", sans-serif;
+  font-family: "Boska_Black", sans-serif;
   font-weight: var(--weight-h1);
   font-size: clamp(40px, 5vw, 64px);
   letter-spacing: 1px;
