@@ -19,20 +19,14 @@
 }
 
 @font-face {
-  font-family: "Arciform";
-  src: url("Font/Satoshi-Bold.otf") format("opentype");
+  font-family: "Satoshi_Light";
+  src: url("Font/Satoshi-Light.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Mont Light";
-  src: url("Font/Satoshi-Bold.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 /* =====================
    TYPOGRAPHY SYSTEM
