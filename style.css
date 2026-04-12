@@ -91,14 +91,14 @@ h1 {
 }
 
 h2 {
-  font-family: "Synonym_Medium", sans-serif;
+  font-family: "Synonym_Bold", sans-serif;
   font-weight: var(--weight-h2);
   font-size: clamp(32px, 4vw, 48px);
   letter-spacing: 0.5px;
 }
 
 h3 {
-  font-family: "Synonym_Bold", sans-serif;
+  font-family: "Synonym_Medium", sans-serif;
   font-weight: var(--weight-h3);
   font-size: clamp(24px, 3vw, 32px);
   letter-spacing: 0.5px;
