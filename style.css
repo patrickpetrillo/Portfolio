@@ -1655,6 +1655,12 @@ p {
   color: #ffffff;
 }
 
+.image-text-module_1 {
+  padding: 120px 60px;
+  background: #ffffff;
+  color: #000000;
+}
+
 .image-text-module--light {
   padding: 120px 60px;
   background: #ffffff;
