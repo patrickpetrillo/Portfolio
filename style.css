@@ -1495,6 +1495,7 @@ p {
   width: 100%;
   aspect-ratio: 9 / 16;
   max-height: 600px;
+  border-radius: 24px;
   overflow: hidden;
   background: #111;
 }
