@@ -421,7 +421,7 @@ p {
 
   .p-card--full {
     grid-column: 1 / -1;
-    height: 150px;
+    height: 50px;
   }
 
   .p-card--big {
@@ -451,7 +451,7 @@ p {
 
   .p-card--full {
     grid-column: 1 / -1;
-    height: 150px;
+    height: 50px;
     min-height: unset;
   }
 
