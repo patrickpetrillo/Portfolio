@@ -320,7 +320,7 @@ p {
 
 .p-card--full {
   grid-column: 1 / -1;
-  height: 320px;
+  height: 200px;
 }
 
 .p-card--big {
