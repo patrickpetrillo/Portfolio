@@ -319,8 +319,8 @@ p {
 }
 
 .p-card--full {
-  grid-column: span 3; /* prende tutte e 3 le colonne */
-  height: 320px; /* più bassa */
+  grid-column: 1 / -1;
+  height: 320px;
 }
 
 .p-card--big {
@@ -357,7 +357,7 @@ p {
   right: 0;
   bottom: 40px;
   text-align: center;
-  padding: 0 0px;
+  padding: 0;
 }
 
 .p-card__title {
@@ -419,6 +419,11 @@ p {
     gap: 24px;
   }
 
+  .p-card--full {
+    grid-column: 1 / -1;
+    height: 260px;
+  }
+
   .p-card--big {
     grid-column: 1 / -1;
   }
@@ -444,6 +449,12 @@ p {
     padding: 0 18px;
   }
 
+  .p-card--full {
+    grid-column: 1 / -1;
+    height: 220px;
+    min-height: unset;
+  }
+
   .p-card {
     height: 64vw;
     min-height: 360px;
@@ -454,6 +465,9 @@ p {
     font-size: 30px;
   }
 }
+
+
+
 
 
 
