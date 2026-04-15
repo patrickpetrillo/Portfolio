@@ -282,6 +282,13 @@ p {
   }
 }
 
+
+
+
+
+
+
+
 /* =====================
    MODULO PORTFOLIO
 ===================== */
@@ -312,7 +319,7 @@ p {
 }
 
 .p-card--full {
-  grid-column: 1 / -1; /* prende tutte e 3 le colonne */
+  grid-column: span 3; /* prende tutte e 3 le colonne */
   height: 320px; /* più bassa */
 }
 
