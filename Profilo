@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Evoluzione Uomo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- =====================
+     FLOATING HOME BUTTON
+====================== -->
+<a href="index.html" class="floating-home" aria-label="Torna alla home">
+  <h1 class="floating-home__text">HOME</h1>
+</a>
+  
+
+  <!-- =====================
+       MODULO HERO 2
+  ====================== -->
+  <section class="hero2" aria-label="Rebuild">
+    <div class="hero2__visual">
+      <img
+        class="hero2__media"
+        src="Evoluzione Uomo/LogoOrizontale.webp"
+        alt="Rebuild"
+      />
+      <div class="hero2__overlay"></div>
+
+      <div class="hero2__inner">
+        <div class="hero2__content">
+          <h1 class="hero2__title">Evoluzione Uomo</h1>
+          <p class="hero2__subtitle">Brand &amp; Visual identity</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       MODULO MARQUEE TEXT
+  ====================== -->
+  <section class="marquee" aria-label="Marquee text">
+    <div class="marquee-track">
+      <div class="marquee-text">
+        GRAPHIC DESIGN — BRAND & VISUAL IDENTITY, MERCHANDISING -
+      </div>
+      <div class="marquee-text" aria-hidden="true">
+        GRAPHIC DESIGN — BRAND & VISUAL IDENTITY, MERCHANDISING -
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       MODULO GALLERY (FULL) — SLIDER
+  ====================== -->
+  <section class="gallery-full" aria-label="Gallery full image" data-gallery>
+    <div class="gallery-full__frame">
+
+      <div class="gallery-full__viewport">
+        <div class="gallery-full__track" data-gallery-track>
+          <img class="gallery-full__slide" src="Evoluzione Uomo/Vetrofania.webp" alt="Evoluzione Uomo">
+          <img class="gallery-full__slide" src="Evoluzione Uomo/Vetrofania2.webp" alt="Evoluzione Uomo">
+        </div>
+      </div>
+
+      <button class="gallery-full__arrow gallery-full__arrow--left" type="button" data-gallery-prev aria-label="Immagine precedente">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 6 L9 12 L15 18"/>
+        </svg>
+      </button>
+
+      <button class="gallery-full__arrow gallery-full__arrow--right" type="button" data-gallery-next aria-label="Immagine successiva">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6 L15 12 L9 18"/>
+        </svg>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- =====================
+       MODULO TESTO
+  ====================== -->
+  <section class="text-module2" aria-label="Testo progetto">
+    <div class="text-module__inner">
+      <h2 class="text-module__title">
+        VISUAL IDENTITY DEVELOPMENT
+      </h2>
+
+      <div class="text-module__body">
+
+        
+        <p>
+        The visual identity project was developed through a methodical approach, focused on building a coherent and recognizable graphic system, capable of clearly defining the brand’s positioning.
+The objective was to create a visual language that is both essential and distinctive, able to convey solidity, attention to detail and formal consistency.
+The development focused on defining a clean and controlled typographic structure, supported by a minimal, high-contrast color palette. The reference to the Italian tricolor was introduced as an identity element, integrated in a subtle yet meaningful way within the system.
+The project was applied across multiple touchpoints, including printed materials, apparel and environmental applications, ensuring visual continuity and perceptual consistency.
+The final result is a solid and flexible visual identity, designed to be consistently applied and to maintain its effectiveness over time.
+        </p>
+
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       MODULO GALLERY (FULL) — SLIDER
+  ====================== -->
+  <section class="gallery-full" aria-label="Gallery full image" data-gallery>
+    <div class="gallery-full__frame">
+
+      <div class="gallery-full__viewport">
+        <div class="gallery-full__track" data-gallery-track>
+          <img class="gallery-full__slide" src="Evoluzione Uomo/Business Cards.webp" alt="Evoluzione Uomo">
+        </div>
+      </div>
+
+      <button class="gallery-full__arrow gallery-full__arrow--left" type="button" data-gallery-prev aria-label="Immagine precedente">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 6 L9 12 L15 18"/>
+        </svg>
+      </button>
+
+      <button class="gallery-full__arrow gallery-full__arrow--right" type="button" data-gallery-next aria-label="Immagine successiva">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6 L15 12 L9 18"/>
+        </svg>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- =====================
+       MODULO GALLERY (FULL) — SLIDER
+  ====================== -->
+  <section class="gallery-full" aria-label="Gallery full image" data-gallery>
+    <div class="gallery-full__frame">
+
+      <div class="gallery-full__viewport">
+        <div class="gallery-full__track" data-gallery-track>
+          <img class="gallery-full__slide" src="Evoluzione Uomo/T-Shirt.webp" alt="Evoluzione Uomo">
+        </div>
+      </div>
+
+      <button class="gallery-full__arrow gallery-full__arrow--left" type="button" data-gallery-prev aria-label="Immagine precedente">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 6 L9 12 L15 18"/>
+        </svg>
+      </button>
+
+      <button class="gallery-full__arrow gallery-full__arrow--right" type="button" data-gallery-next aria-label="Immagine successiva">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6 L15 12 L9 18"/>
+        </svg>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- =====================
+       MODULO GALLERY (FULL) — SLIDER
+  ====================== -->
+  <section class="gallery-full" aria-label="Gallery full image" data-gallery>
+    <div class="gallery-full__frame">
+
+      <div class="gallery-full__viewport">
+        <div class="gallery-full__track" data-gallery-track>
+          <img class="gallery-full__slide" src="Evoluzione Uomo/Cartellino.webp" alt="Evoluzione Uomo">
+        </div>
+      </div>
+
+      <button class="gallery-full__arrow gallery-full__arrow--left" type="button" data-gallery-prev aria-label="Immagine precedente">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 6 L9 12 L15 18"/>
+        </svg>
+      </button>
+
+      <button class="gallery-full__arrow gallery-full__arrow--right" type="button" data-gallery-next aria-label="Immagine successiva">
+        <svg class="gallery-full__arrow-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6 L15 12 L9 18"/>
+        </svg>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- =====================
+       MODULO PROGRAMS USED
+  ====================== -->
+  <section class="programs-module-1" aria-label="Programs used in this project">
+    <div class="programs-module__inner">
+
+      <div class="programs-module__text">
+        <h2 class="programs-module__title-1">
+          Programs used<br>
+          in this project.
+        </h2>
+      </div>
+
+      <div class="programs-module__icons">
+        <div class="programs-module__grid">
+
+          <div class="programs-module__icon">
+            <img src="SVG/icon 01-01.svg" alt="Program icon 1">
+          </div>
+
+          <div class="programs-module__icon">
+            <img src="SVG/icon 01-02.svg" alt="Program icon 2">
+          </div>
+
+          <div class="programs-module__icon">
+            <img src="SVG/icon 01-05.svg" alt="Program icon 3">
+          </div>
+
+          <div class="programs-module__icon">
+            <img src="SVG/icon 01-05.svg" alt="Program icon 4">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  
+  <!-- =====================
+       MODULO CONTATTI & SOCIAL
+  ====================== -->
+  <section class="contact-bar" aria-label="Contatti e social">
+    <div class="contact-bar__inner">
+
+      <div class="contact-bar__left">
+        <span class="contact-bar__name">Patrick Petrillo</span>
+
+        <a class="contact-bar__link" href="mailto:patrickpetrillo.96@gmail.com">
+          patrickpetrillo.96@gmail.com
+        </a>
+
+        <a class="contact-bar__link" href="tel:+393284699485">
+          +39 328 4699485
+        </a>
+      </div>
+
+      <div class="contact-bar__right" aria-label="Social links">
+        <a class="contact-bar__social" href="https://www.instagram.com/patrickpetrillo/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/>
+            <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+            <path d="M17.6 6.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+          </svg>
+        </a>
+
+        <a class="contact-bar__social" href="https://www.linkedin.com/in/patrick-petrillo-040746150/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0.5 23.5h4V7.98h-4V23.5zM8.5 7.98h3.83v2.12h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.66 4.8 6.12v9.34h-4v-8.28c0-1.97-.04-4.5-2.74-4.5-2.74 0-3.16 2.14-3.16 4.35v8.43h-4V7.98z"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
