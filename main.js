@@ -184,3 +184,41 @@ function initFloatingHome() {
   toggleFloatingHome();
   window.addEventListener("scroll", toggleFloatingHome, { passive: true });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================
+   PROJECT ACCORDION
+===================== */
+function initProjectAccordion() {
+  const accordionItems = document.querySelectorAll(".project-accordion__item");
+  if (!accordionItems.length) return;
+
+  accordionItems.forEach((item) => {
+    const trigger = item.querySelector(".project-accordion__trigger");
+    if (!trigger) return;
+
+    trigger.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-open");
+
+      item.classList.toggle("is-open", !isOpen);
+      trigger.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
+}
