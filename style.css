@@ -457,7 +457,7 @@ p {
 
   .p-card {
     height: 64vw;
-    min-height: 360px;
+    min-height: 50px;
     border-radius: 22px;
   }
 
