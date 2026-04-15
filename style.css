@@ -1820,6 +1820,16 @@ p {
   margin-bottom: 20px;
 }
 
+.overlap-module__body {
+  margin-bottom: 20px;
+}
+
+.overlap-module__body p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
 .overlap-module__link {
   font-size: 14px;
   text-decoration: none;
