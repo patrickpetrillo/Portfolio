@@ -1669,8 +1669,7 @@ p {
   margin: 0 auto;      /* QUESTO centra tutto */
   padding: 0 20px;     /* margine interno mobile */
   display: grid;
-  grid-template-columns: 1.2fr 1.8fr;
-  gap: 260px;
+  grid-template-columns: 1.2fr 1.8fr;;
   align-items: start;
 }
 
