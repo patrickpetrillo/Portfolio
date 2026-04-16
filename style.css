@@ -1722,6 +1722,25 @@ p {
   opacity: 0.5;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer__text {
+    max-width: 100%;
+  }
+
+  .footer__bottom {
+    margin-top: 40px;
+  }
+}
+
 
 
 
