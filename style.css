@@ -1713,7 +1713,7 @@ p {
 
 .site-footer__links {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
   gap: 80px;
 
   justify-content: end;   /* 👉 spinge tutto a destra */
