@@ -1665,8 +1665,9 @@ p {
 }
 
 .site-footer__inner {
-  max-width: 1460px;
-  margin: 0 auto;
+  max-width: 1200px;   /* controlla larghezza */
+  margin: 0 auto;      /* QUESTO centra tutto */
+  padding: 0 20px;     /* margine interno mobile */
   display: grid;
   grid-template-columns: 1.2fr 1.8fr;
   gap: 260px;
