@@ -1669,7 +1669,7 @@ p {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 1.8fr;
-  gap: 120px;
+  gap: 160px;
   align-items: start;
 }
 
