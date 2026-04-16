@@ -1713,8 +1713,10 @@ p {
 
 .site-footer__links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  grid-template-columns: repeat(2, auto);
+  gap: 80px;
+
+  justify-content: end;   /* 👉 spinge tutto a destra */
 }
 
 .site-footer__col h3 {
